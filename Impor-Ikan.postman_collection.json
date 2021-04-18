@@ -1,0 +1,2020 @@
+{
+	"info": {
+		"_postman_id": "8fdba8e8-3c1f-4e7b-b25c-48f2a6022408",
+		"name": "Impor-Ikan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "client_20@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "client_20@mail.com",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "admin123 ",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}api/client/auth/register?email=zolsa@gmail.com&password=fikih123&name=fikih&password_confirmation=fikih123&address=asd&phone_number=423434312452312",
+									"host": [
+										"{{base_url}}api"
+									],
+									"path": [
+										"client",
+										"auth",
+										"register"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "zolsa@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "fikih123"
+										},
+										{
+											"key": "name",
+											"value": "fikih"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "fikih123"
+										},
+										{
+											"key": "address",
+											"value": "asd"
+										},
+										{
+											"key": "phone_number",
+											"value": "423434312452312"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Send Email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL2NsaWVudFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTUzODM4NzYsImV4cCI6MTYxNTM4NzQ3NiwibmJmIjoxNjE1MzgzODc2LCJqdGkiOiJ1bUlYdUVkZWlKNWhDOFE1Iiwic3ViIjoyNCwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.48Vqd9lxnUtx1rEvUNaJ1vaHRA7Ozrt2UfHad8t_jWo"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/auth/send-email",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"client",
+										"auth",
+										"send-email"
+									],
+									"query": [
+										{
+											"key": "otp",
+											"value": "sadsad",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL2NsaWVudFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTUzODM4NzYsImV4cCI6MTYxNTM4NzQ3NiwibmJmIjoxNjE1MzgzODc2LCJqdGkiOiJ1bUlYdUVkZWlKNWhDOFE1Iiwic3ViIjoyNCwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.48Vqd9lxnUtx1rEvUNaJ1vaHRA7Ozrt2UfHad8t_jWo",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/auth/verify-email?otp=GUXL4J",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"client",
+										"auth",
+										"verify-email"
+									],
+									"query": [
+										{
+											"key": "otp",
+											"value": "GUXL4J"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Merchant",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "merchant_operator_3@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/merchant-operator/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"merchant-operator",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Operator",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/auth/login?email=operator_1@mail.com&password=operator123",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "operator_1@mail.com"
+										},
+										{
+											"key": "password",
+											"value": "operator123"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Review",
+					"item": [
+						{
+							"name": "Detail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9jbGllbnRcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjE0ODMzMjA3LCJleHAiOjE2MTQ4MzY4MDcsIm5iZiI6MTYxNDgzMzIwNywianRpIjoiUXRHT2ZtU0x2MXZWV3RFOSIsInN1YiI6MSwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.G5YQm8AEEyiw5D0njr43qYaonRK0wqhVOQaE4hqwtSg"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/auth/review/2",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"client",
+										"auth",
+										"review",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL2NsaWVudFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ4NTc5OTksImV4cCI6MTYxNDg2MTU5OSwibmJmIjoxNjE0ODU3OTk5LCJqdGkiOiJwMlF3RlpSMkRaZGRZR3VHIiwic3ViIjoxLCJwcnYiOiI0MWVmYjdiYWQ3ZjZmNjMyZTI0MDViZDNhNzkzYjhhNmJkZWM2Nzc3IiwiZ3VhcmQiOiJDTElFTlQifQ.YT4T-eJ6bol-5k_8zGmb57T8OI_GlWK8-_mI5uBC9Qw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/auth/review/add/1?star=5&description=dasd",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"client",
+										"auth",
+										"review",
+										"add",
+										"1"
+									],
+									"query": [
+										{
+											"key": "star",
+											"value": "5"
+										},
+										{
+											"key": "description",
+											"value": "dasd"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9jbGllbnRcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjE0ODMzMjA3LCJleHAiOjE2MTQ4MzY4MDcsIm5iZiI6MTYxNDgzMzIwNywianRpIjoiUXRHT2ZtU0x2MXZWV3RFOSIsInN1YiI6MSwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.G5YQm8AEEyiw5D0njr43qYaonRK0wqhVOQaE4hqwtSg"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/auth/review/delete/2",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"client",
+										"auth",
+										"review",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9jbGllbnRcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjE0ODMzMjA3LCJleHAiOjE2MTQ4MzY4MDcsIm5iZiI6MTYxNDgzMzIwNywianRpIjoiUXRHT2ZtU0x2MXZWV3RFOSIsInN1YiI6MSwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.G5YQm8AEEyiw5D0njr43qYaonRK0wqhVOQaE4hqwtSg"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/auth/review/edit/1?star=4&description=asdasd",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"client",
+										"auth",
+										"review",
+										"edit",
+										"1"
+									],
+									"query": [
+										{
+											"key": "star",
+											"value": "4"
+										},
+										{
+											"key": "description",
+											"value": "asdasd"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/client/fish/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"fish",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}api/client/fish/4",
+									"host": [
+										"{{base_url}}api"
+									],
+									"path": [
+										"client",
+										"fish",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By Merchant Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/fish/merchant/22",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"client",
+										"fish",
+										"merchant",
+										"22"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaction",
+					"item": [
+						{
+							"name": "Checkout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "no-cache",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL2NsaWVudFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2OTEwNDQsImV4cCI6MTYxNjY5NDY0NCwibmJmIjoxNjE2NjkxMDQ0LCJqdGkiOiJZb2lTMEFoSGN5TDBnaEZIIiwic3ViIjoxMywicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.QdcfZ2Z37_XwjFC8VG5hOCmGT1dHkyITimFU6EiXS-E",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"note\" : \"asda\",  \r\n    \"address\" : \"asdsa\",\r\n    \"products\":[\r\n        {\r\n            \"fish_id\" : \"4\",\r\n            \"quantity\" : \"11\"\r\n        },\r\n        {\r\n            \"fish_id\" : \"4\",\r\n            \"quantity\" : \"11\"\r\n        }\r\n    ]\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/auth/transaction/checkout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"auth",
+										"transaction",
+										"checkout"
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Order Cancel",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Cache-Control",
+										"type": "text",
+										"value": "no-cache",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL2NsaWVudFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2ODYxMTMsImV4cCI6MTYxNjY4OTcxMywibmJmIjoxNjE2Njg2MTEzLCJqdGkiOiJKVndsajVEWGgyeVE0YlUwIiwic3ViIjozMiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.otZgV031oMEMqKik4IO9A_rNQOhnbnhxSgrDVeUVgvU"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"note\" : \"asda\",  \r\n    \"address\" : \"asdsa\",\r\n    \"products\":[\r\n        {\r\n            \"fish_id\" : \"4\",\r\n            \"quantity\" : \"11\"\r\n        },\r\n        {\r\n            \"fish_id\" : \"4\",\r\n            \"quantity\" : \"11\"\r\n        }\r\n    ]\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/auth/transaction/cancel/13",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"auth",
+										"transaction",
+										"cancel",
+										"13"
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload CP",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+										"key": "Content-Type",
+										"type": "text",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Cache-Control",
+										"type": "text",
+										"value": "no-cache",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL2NsaWVudFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2OTEwNDQsImV4cCI6MTYxNjY5NDY0NCwibmJmIjoxNjE2NjkxMDQ0LCJqdGkiOiJZb2lTMEFoSGN5TDBnaEZIIiwic3ViIjoxMywicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.QdcfZ2Z37_XwjFC8VG5hOCmGT1dHkyITimFU6EiXS-E"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "gambar",
+											"type": "file",
+											"src": "/C:/Users/Fiqih Amar/Pictures/Capture.PNG"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/auth/transaction/upload/16",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"auth",
+										"transaction",
+										"upload",
+										"16"
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Cache-Control",
+										"type": "text",
+										"value": "no-cache",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9jbGllbnRcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjE2Njc4MTI3LCJleHAiOjE2MTY2ODE3MjcsIm5iZiI6MTYxNjY3ODEyNywianRpIjoiV05jbEJLZFRDTVJWMENvUCIsInN1YiI6MiwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.UBHxC2d1rmnj1i07Kz42TmUsvbCF06sglR62GlY5Ets"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fish_id\" : \"4\",\r\n    \"note\" : \"asda\",  \r\n    \"address\" : \"asdsa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/auth/transaction/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"auth",
+										"transaction",
+										""
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Cache-Control",
+										"type": "text",
+										"value": "no-cache",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL2NsaWVudFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2OTEwNDQsImV4cCI6MTYxNjY5NDY0NCwibmJmIjoxNjE2NjkxMDQ0LCJqdGkiOiJZb2lTMEFoSGN5TDBnaEZIIiwic3ViIjoxMywicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.QdcfZ2Z37_XwjFC8VG5hOCmGT1dHkyITimFU6EiXS-E"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/client/auth/transaction/detail/16",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"client",
+										"auth",
+										"transaction",
+										"detail",
+										"16"
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9jbGllbnRcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjE0NzY0MDg3LCJleHAiOjE2MTQ3Njc2ODcsIm5iZiI6MTYxNDc2NDA4NywianRpIjoiNHhmY3hkTjgyN1VZRHNtdSIsInN1YiI6MSwicHJ2IjoiNDFlZmI3YmFkN2Y2ZjYzMmUyNDA1YmQzYTc5M2I4YTZiZGVjNjc3NyIsImd1YXJkIjoiQ0xJRU5UIn0.WnTkBQoVqSZ3ngXMrvaF4SSBi_5SgpJllUfhha0uc3M",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/client/auth/check",
+							"protocol": "https",
+							"host": [
+								"it",
+								"trikerja",
+								"id"
+							],
+							"path": [
+								"projects",
+								"api",
+								"impor-ikan-app",
+								"api",
+								"client",
+								"auth",
+								"check"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Merchant",
+			"item": [
+				{
+					"name": "Fish Products",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL21lcmNoYW50LW9wZXJhdG9yXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxNjY5MjU2MywiZXhwIjoxNjE2Njk2MTYzLCJuYmYiOjE2MTY2OTI1NjMsImp0aSI6IjMxQWNUaWRJdEdNUmV4YzkiLCJzdWIiOjQsInBydiI6ImZiZDQ2N2YzOGZmYzkzOGQxYjFmMmE1ZjU4OTRjZDg1NWQ4Zjg0NzgiLCJndWFyZCI6Ik1FUkNIQU5UX09QRVJBVE9SIn0.Ot15NdJyq5rabtCCOnMONmVVy2RRxgKUwPqjyHQlRSM"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/merchant-operator/auth/products/ ",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"merchant-operator",
+										"auth",
+										"products",
+										" "
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL21lcmNoYW50LW9wZXJhdG9yXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxNjY5MjU2MywiZXhwIjoxNjE2Njk2MTYzLCJuYmYiOjE2MTY2OTI1NjMsImp0aSI6IjMxQWNUaWRJdEdNUmV4YzkiLCJzdWIiOjQsInBydiI6ImZiZDQ2N2YzOGZmYzkzOGQxYjFmMmE1ZjU4OTRjZDg1NWQ4Zjg0NzgiLCJndWFyZCI6Ik1FUkNIQU5UX09QRVJBVE9SIn0.Ot15NdJyq5rabtCCOnMONmVVy2RRxgKUwPqjyHQlRSM",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/merchant-operator/auth/products/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"merchant-operator",
+										"auth",
+										"products",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9tZXJjaGFudC1vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ4MjMyNzQsImV4cCI6MTYxNDgyNjg3NCwibmJmIjoxNjE0ODIzMjc0LCJqdGkiOiJBYkZ6eUlxaXhGR0lNVXlwIiwic3ViIjoxLCJwcnYiOiJmYmQ0NjdmMzhmZmM5MzhkMWIxZjJhNWY1ODk0Y2Q4NTVkOGY4NDc4IiwiZ3VhcmQiOiJNRVJDSEFOVF9PUEVSQVRPUiJ9.R1C71lrS0ZX-Fl2-MB8gYAF2KKi1eo4spiaxhg5ACEI",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/merchant-operator/auth/products/add?fish_id=1&quantity=12",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"merchant-operator",
+										"auth",
+										"products",
+										"add"
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "1"
+										},
+										{
+											"key": "quantity",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9tZXJjaGFudC1vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ4MjY5MjQsImV4cCI6MTYxNDgzMDUyNCwibmJmIjoxNjE0ODI2OTI0LCJqdGkiOiJZUUU5MU90OEdIM2hqUXcyIiwic3ViIjoxLCJwcnYiOiJmYmQ0NjdmMzhmZmM5MzhkMWIxZjJhNWY1ODk0Y2Q4NTVkOGY4NDc4IiwiZ3VhcmQiOiJNRVJDSEFOVF9PUEVSQVRPUiJ9.lcR1EcLypjlte78tvFcCTFmbgTuzjlEZzKToyWJyBME",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/merchant-operator/auth/products/edit/1?fish_id=3&quantity=23123",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"merchant-operator",
+										"auth",
+										"products",
+										"edit",
+										"1"
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "3"
+										},
+										{
+											"key": "quantity",
+											"value": "23123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9tZXJjaGFudC1vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ4MjY5MjQsImV4cCI6MTYxNDgzMDUyNCwibmJmIjoxNjE0ODI2OTI0LCJqdGkiOiJZUUU5MU90OEdIM2hqUXcyIiwic3ViIjoxLCJwcnYiOiJmYmQ0NjdmMzhmZmM5MzhkMWIxZjJhNWY1ODk0Y2Q4NTVkOGY4NDc4IiwiZ3VhcmQiOiJNRVJDSEFOVF9PUEVSQVRPUiJ9.lcR1EcLypjlte78tvFcCTFmbgTuzjlEZzKToyWJyBME"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/merchant-operator/auth/products/delete/11",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"merchant-operator",
+										"auth",
+										"products",
+										"delete",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaction",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9tZXJjaGFudC1vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2NzgxOTYsImV4cCI6MTYxNjY4MTc5NiwibmJmIjoxNjE2Njc4MTk2LCJqdGkiOiJKOWhqRWVkOFBTVmJnV3BMIiwic3ViIjo0LCJwcnYiOiJmYmQ0NjdmMzhmZmM5MzhkMWIxZjJhNWY1ODk0Y2Q4NTVkOGY4NDc4IiwiZ3VhcmQiOiJNRVJDSEFOVF9PUEVSQVRPUiJ9.slGnSIUv2ANOoNo_x0HPX6lD_rB0B9PO7-7QJgZXUGQ",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/merchant-operator/auth/transaction/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"merchant-operator",
+										"auth",
+										"transaction",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Cache-Control",
+										"type": "text",
+										"value": "no-cache",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9tZXJjaGFudC1vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2OTA0NTIsImV4cCI6MTYxNjY5NDA1MiwibmJmIjoxNjE2NjkwNDUyLCJqdGkiOiIzenlYZE5CNXdrUndSbTFyIiwic3ViIjo0LCJwcnYiOiJmYmQ0NjdmMzhmZmM5MzhkMWIxZjJhNWY1ODk0Y2Q4NTVkOGY4NDc4IiwiZ3VhcmQiOiJNRVJDSEFOVF9PUEVSQVRPUiJ9.b9e5bRlZBJgemzopO8eFmMG6oSaFUSfbGJ8T0kGa58k"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/merchant-operator/auth/transaction/detail/16",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"merchant-operator",
+										"auth",
+										"transaction",
+										"detail",
+										"16"
+									],
+									"query": [
+										{
+											"key": "fish_id",
+											"value": "4",
+											"disabled": true
+										},
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Status",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Cache-Control",
+										"type": "text",
+										"value": "no-cache",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9tZXJjaGFudC1vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2NTU2MzksImV4cCI6MTYxNjY1OTIzOSwibmJmIjoxNjE2NjU1NjM5LCJqdGkiOiI4WGZyUEdrWkc3UEpFN05PIiwic3ViIjoyLCJwcnYiOiJmYmQ0NjdmMzhmZmM5MzhkMWIxZjJhNWY1ODk0Y2Q4NTVkOGY4NDc4IiwiZ3VhcmQiOiJNRVJDSEFOVF9PUEVSQVRPUiJ9.Dvth67NNZb7i22cJJly34XegF02xcl7Gm9NSW0T1_D4"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "CP",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/merchant-operator/auth/transaction/update/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"merchant-operator",
+										"auth",
+										"transaction",
+										"update",
+										"11"
+									],
+									"query": [
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "CP",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Order Cancel",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Cache-Control",
+										"type": "text",
+										"value": "no-cache",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9tZXJjaGFudC1vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTY2ODYzNzgsImV4cCI6MTYxNjY4OTk3OCwibmJmIjoxNjE2Njg2Mzc4LCJqdGkiOiIycmhSbGZjRHhrMzZiVlBwIiwic3ViIjo0LCJwcnYiOiJmYmQ0NjdmMzhmZmM5MzhkMWIxZjJhNWY1ODk0Y2Q4NTVkOGY4NDc4IiwiZ3VhcmQiOiJNRVJDSEFOVF9PUEVSQVRPUiJ9.T6hOh1zWS8887AouWmwT5-mqL6wunMvrSa3P8Gi0PHs"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/merchant-operator/auth/transaction/cancel/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"merchant-operator",
+										"auth",
+										"transaction",
+										"cancel",
+										"11"
+									],
+									"query": [
+										{
+											"key": "merchant_id",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "asdsaasds",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "asds",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "CP",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9sb2dpbk1lcmNoYW50IiwiaWF0IjoxNjE0MzYwMTA0LCJleHAiOjE2MTQzNjM3MDQsIm5iZiI6MTYxNDM2MDEwNCwianRpIjoiak16VWNXUWdsRU51YmF6MiIsInN1YiI6MSwicHJ2IjoiZDNiMWVkZWJmZDc3ODIzZTcwMmE0YmUyNzBmYWZlOWM1YTExYjI0NiIsImdyZCI6Ik0ifQ.ek0AVKP2ozBTiFBrLpJ3-GD-Ngzddnd9Y-hf_4XAV-k",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/merchant-operator/auth/check",
+							"protocol": "https",
+							"host": [
+								"it",
+								"trikerja",
+								"id"
+							],
+							"path": [
+								"projects",
+								"api",
+								"impor-ikan-app",
+								"api",
+								"merchant-operator",
+								"auth",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fish Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL21lcmNoYW50LW9wZXJhdG9yXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxNTI1ODUyOCwiZXhwIjoxNjE1MjYyMTI4LCJuYmYiOjE2MTUyNTg1MjgsImp0aSI6IndKRmpBeVZ0ZTljN2FyRGEiLCJzdWIiOjIsInBydiI6ImZiZDQ2N2YzOGZmYzkzOGQxYjFmMmE1ZjU4OTRjZDg1NWQ4Zjg0NzgiLCJndWFyZCI6Ik1FUkNIQU5UX09QRVJBVE9SIn0.R3lVEe4B03TFhKp9KwG7wyPJvpZb5XrealDQq-7FdLs"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/merchant-operator/auth/fish",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"merchant-operator",
+								"auth",
+								"fish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Operator",
+			"item": [
+				{
+					"name": "Fish Data",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL29wZXJhdG9yXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxNTAzNzExMCwiZXhwIjoxNjE1MDQwNzEwLCJuYmYiOjE2MTUwMzcxMTAsImp0aSI6IlE3YWxRbnpCT2NyZVpqS3YiLCJzdWIiOjIsInBydiI6IjJjMTA2MTYyYTllNmVkOGI2NDk3ZmViNzc4ZTNlMDA3NzM0Zjk4YjQiLCJndWFyZCI6Ik9QRVJBVE9SIn0.Kf6MwTZ5byNziOuW-w1ibJDHME_03cDSifbgGGl-Ewc"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ3ODQzNDAsImV4cCI6MTYxNDc4Nzk0MCwibmJmIjoxNjE0Nzg0MzQwLCJqdGkiOiI1UmFCdFBOb1BpbktqYkc2Iiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.U8FX-GJ5ixO9Xx-3AST_OYWQlMSCrwMLDkRws5qqQTg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/2",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ3ODcwNzEsImV4cCI6MTYxNDc5MDY3MSwibmJmIjoxNjE0Nzg3MDcxLCJqdGkiOiJnbm9Vd0lIQXdURFBuUUpSIiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.cu2QeyI7q0JF4S1lmslXez1rYc1jUP9GuAXQWwanQ8E",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/add?name=Lele&description=ini ikan Lele&type=FRESH&min_order=100&price=5000000",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"add"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lele"
+										},
+										{
+											"key": "description",
+											"value": "ini ikan Lele"
+										},
+										{
+											"key": "type",
+											"value": "FRESH"
+										},
+										{
+											"key": "min_order",
+											"value": "100"
+										},
+										{
+											"key": "price",
+											"value": "5000000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL29wZXJhdG9yXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxNTM5MjkxNywiZXhwIjoxNjE1Mzk2NTE3LCJuYmYiOjE2MTUzOTI5MTcsImp0aSI6ImYzd05iRWNDeGFQV05CMkgiLCJzdWIiOjIsInBydiI6IjJjMTA2MTYyYTllNmVkOGI2NDk3ZmViNzc4ZTNlMDA3NzM0Zjk4YjQiLCJndWFyZCI6Ik9QRVJBVE9SIn0.i1pOtK4lCQyS3-gmmKgGxqegW35dx21tg4AiNEvPUwo",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/edit/2?name=sdsad&description=ini ikan Leleaaasdsadsad&type=FROZEN&min_order=100&price=5000000",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"edit",
+										"2"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "sdsad"
+										},
+										{
+											"key": "description",
+											"value": "ini ikan Leleaaasdsadsad"
+										},
+										{
+											"key": "type",
+											"value": "FROZEN"
+										},
+										{
+											"key": "min_order",
+											"value": "100"
+										},
+										{
+											"key": "price",
+											"value": "5000000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ3ODQzNDAsImV4cCI6MTYxNDc4Nzk0MCwibmJmIjoxNjE0Nzg0MzQwLCJqdGkiOiI1UmFCdFBOb1BpbktqYkc2Iiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.U8FX-GJ5ixO9Xx-3AST_OYWQlMSCrwMLDkRws5qqQTg"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/delete/2",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Fish Image",
+					"item": [
+						{
+							"name": "All",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ5MzkzOTcsImV4cCI6MTYxNDk0Mjk5NywibmJmIjoxNjE0OTM5Mzk3LCJqdGkiOiJSaFFDeE9HdjZPVlpsd29xIiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.xM7Flyou-dqtrrDMvV0AAYWqrqxKGpUvAT_gPqoytpM"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish-image/",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish-image",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ3ODQzNDAsImV4cCI6MTYxNDc4Nzk0MCwibmJmIjoxNjE0Nzg0MzQwLCJqdGkiOiI1UmFCdFBOb1BpbktqYkc2Iiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.U8FX-GJ5ixO9Xx-3AST_OYWQlMSCrwMLDkRws5qqQTg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/2",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ3ODcwNzEsImV4cCI6MTYxNDc5MDY3MSwibmJmIjoxNjE0Nzg3MDcxLCJqdGkiOiJnbm9Vd0lIQXdURFBuUUpSIiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.cu2QeyI7q0JF4S1lmslXez1rYc1jUP9GuAXQWwanQ8E",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/add?name=Lele&description=ini ikan Lele&type=FRESH&min_order=100&price=5000000",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"add"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Lele"
+										},
+										{
+											"key": "description",
+											"value": "ini ikan Lele"
+										},
+										{
+											"key": "type",
+											"value": "FRESH"
+										},
+										{
+											"key": "min_order",
+											"value": "100"
+										},
+										{
+											"key": "price",
+											"value": "5000000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ3ODQxMDYsImV4cCI6MTYxNDc4NzcwNiwibmJmIjoxNjE0Nzg0MTA2LCJqdGkiOiI4U05ybTRHRlVkVEFEMllUIiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.VITk-4VH7U0LDOzEtKD9F8QQdqXPQPi4jkdpTCh9rdM",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/edit/2?name=sdsad&description=ini ikan Leleaaasdsadsad&type=FROZEN&min_order=100&price=5000000",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"edit",
+										"2"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "sdsad"
+										},
+										{
+											"key": "description",
+											"value": "ini ikan Leleaaasdsadsad"
+										},
+										{
+											"key": "type",
+											"value": "FROZEN"
+										},
+										{
+											"key": "min_order",
+											"value": "100"
+										},
+										{
+											"key": "price",
+											"value": "5000000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zZXJ2ZXIudGVzdFwvYXBpXC9vcGVyYXRvclwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MTQ3ODQzNDAsImV4cCI6MTYxNDc4Nzk0MCwibmJmIjoxNjE0Nzg0MzQwLCJqdGkiOiI1UmFCdFBOb1BpbktqYkc2Iiwic3ViIjoxLCJwcnYiOiIyYzEwNjE2MmE5ZTZlZDhiNjQ5N2ZlYjc3OGUzZTAwNzczNGY5OGI0IiwiZ3VhcmQiOiJPUEVSQVRPUiJ9.U8FX-GJ5ixO9Xx-3AST_OYWQlMSCrwMLDkRws5qqQTg"
+									}
+								],
+								"url": {
+									"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/delete/2",
+									"protocol": "https",
+									"host": [
+										"it",
+										"trikerja",
+										"id"
+									],
+									"path": [
+										"projects",
+										"api",
+										"impor-ikan-app",
+										"api",
+										"operator",
+										"fish",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Dashboard",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvaXQudHJpa2VyamEuaWRcL3Byb2plY3RzXC9hcGlcL2ltcG9yLWlrYW4tYXBwXC9hcGlcL29wZXJhdG9yXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxNDc4MzYwNSwiZXhwIjoxNjE0Nzg3MjA1LCJuYmYiOjE2MTQ3ODM2MDUsImp0aSI6IlhnWnJmODRmbDduUFRtQTAiLCJzdWIiOjIsInBydiI6IjJjMTA2MTYyYTllNmVkOGI2NDk3ZmViNzc4ZTNlMDA3NzM0Zjk4YjQiLCJndWFyZCI6Ik9QRVJBVE9SIn0.9G8MYNNjsX--655RJ57PzxmvSeXb1ZUFjhkVWJgkbtY",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://it.trikerja.id/projects/api/impor-ikan-app/api/operator/fish/",
+							"protocol": "https",
+							"host": [
+								"it",
+								"trikerja",
+								"id"
+							],
+							"path": [
+								"projects",
+								"api",
+								"impor-ikan-app",
+								"api",
+								"operator",
+								"fish",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
